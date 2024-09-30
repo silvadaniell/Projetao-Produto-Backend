@@ -7,17 +7,20 @@ class User(models.Model):
 class Historia(models.Model):
     qtd_atividades = models.IntegerField()
 
-class Atividade(models.Model):
-    resolution_time = models.TimeField()
-    correct = models.BooleanField()
+    # definir os videos e a disposicao das atividades
 
-    kid = models.OneToOneField(
-        User, 
-        on_delete=models.CASCADE
-    )
+class Atividade(models.Model):
+    pre_video = models.CharField() #pre video link
+    content = models.JSONField()
+    dificuldade = models.IntegerField()
 
     historia = models.OneToOneField(
         Historia,
         on_delete=models.CASCADE
     )
 
+class CriancaAtividade(models.Model):
+    crianca = models.ForeignKey(to=User)
+    atividade = models.ForeignKey(to=Atividade)
+    correto = models.BooleanField()
+    tempo_resolucao = models.TimeField()

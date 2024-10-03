@@ -1,17 +1,12 @@
 from rest_framework import serializers
-from .models import AtividadeABC, AtividadeSilabas, AtividadePalavras
+from .models import Atividade, CriancaAtividade
 
-class AtividadeABCSerializer(serializers.ModelSerializer):
+class AtividadeSerializer(serializers.ModelSerializer):
     class Meta:
-        model = AtividadeABC
-        fields = ['id', 'usuario_id', 'atividades_concluidas', 'atividades_com_erro', 'erros_por_atividade']
+        model = Atividade
+        fields = ['id', 'pre_video', 'content', 'dificuldade'] 
 
-class AtividadeSilabasSerializer(serializers.ModelSerializer):
+class CriancaAtividadeSerializer(serializers.ModelSerializer):
     class Meta:
-        model = AtividadeSilabas
-        fields = ['id', 'usuario_id', 'atividades_concluidas', 'atividades_com_erro', 'erros_por_atividade']
-
-class AtividadePalavrasSerializer(serializers.ModelSerializer):
-    class Meta:
-        model = AtividadePalavras
-        fields = ['id', 'usuario_id', 'atividades_concluidas', 'atividades_com_erro', 'erros_por_atividade']
+        model = CriancaAtividade
+        fields = ['id', 'correto', 'tempo_resolucao', 'atividade']

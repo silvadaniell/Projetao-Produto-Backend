@@ -1,11 +1,11 @@
 from rest_framework import viewsets
-from .models import Atividades
-from .serializers import AtividadesSerializer, CriancaAtividadeSerializer
+from .models import Atividade
+from .serializers import AtividadeSerializer, CriancaAtividadeSerializer
 
 class AtividadeViewSet(viewsets.ModelViewSet):
-    queryset = Atividades.objects.all()
-    serializer_class = AtividadesSerializer
+    queryset = Atividade.objects.all()
+    serializer_class = AtividadeSerializer
 
 class CriancaAtividadeViewSet(viewsets.ModelViewSet):
-    queryset = Atividades.objects.all()
+    queryset = Atividade.objects.all()
     serializer_class = CriancaAtividadeSerializer

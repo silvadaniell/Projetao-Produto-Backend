@@ -42,6 +42,8 @@ INSTALLED_APPS = [
     'relatorios',
     'historias',
     'atividades',
+    'historico_atividade',
+
 ]
 
 MIDDLEWARE = [

@@ -1,15 +1,7 @@
-from rest_framework import viewsets
-from .models import AtividadeABC, AtividadeSilabas, AtividadePalavras
-from .serializers import AtividadeABCSerializer, AtividadeSilabasSerializer, AtividadePalavrasSerializer
+from django.http import JsonResponse
 
-class AtividadeABCViewSet(viewsets.ModelViewSet):
-    queryset = AtividadeABC.objects.all()
-    serializer_class = AtividadeABCSerializer
-
-class AtividadeSilabasViewSet(viewsets.ModelViewSet):
-    queryset = AtividadeSilabas.objects.all()
-    serializer_class = AtividadeSilabasSerializer
-
-class AtividadePalavrasViewSet(viewsets.ModelViewSet):
-    queryset = AtividadePalavras.objects.all()
-    serializer_class = AtividadePalavrasSerializer
+def some_view(request):
+    data = {
+        "message": "This is a response from some_view."
+    }
+    return JsonResponse(data)

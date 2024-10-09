@@ -10,6 +10,9 @@ class Atividade(models.Model):
         'historias.Historia',
         on_delete=models.CASCADE
     )
+    
+    def __str__(self):
+        return f"Atividade {self.id} - Dificuldade {self.dificuldade}"
 
 class CriancaAtividade(models.Model):
     crianca = models.ForeignKey(User, on_delete=models.CASCADE)

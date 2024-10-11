@@ -1,1 +1,4 @@
-venv
+# Ignorar arquivos __pycache__ e outras pastas geradas pelo Python
+__pycache__/
+*.pyc
+*.pyo

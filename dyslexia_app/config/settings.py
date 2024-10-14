@@ -85,7 +85,7 @@ WSGI_APPLICATION = 'config.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'dyslexia_app',      
+        'NAME': 'postgres',      
         'USER': 'postgres',        
         'PASSWORD': '123456789',       
         'HOST': 'localhost',

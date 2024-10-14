@@ -13,8 +13,8 @@ class Users(models.Model):
     first_name = models.CharField(max_length=50)
     last_name = models.CharField(max_length=50)
     age = models.IntegerField(validators=[validate_age])
-
+    
     def __str__(self):
         return self.username
-
-
+    class Meta:
+        db_table = "users"

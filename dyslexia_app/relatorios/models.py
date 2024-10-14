@@ -29,3 +29,5 @@ class AtividadePalavras(models.Model):
     def __str__(self):
         return f'AtividadePalavras - {self.usuario_id}'
 
+    class Meta:
+        db_table ="relatorios"

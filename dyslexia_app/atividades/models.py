@@ -19,3 +19,6 @@ class CriancaAtividade(models.Model):
     atividade = models.ForeignKey(Atividade, on_delete=models.CASCADE)
     correto = models.BooleanField()
     tempo_resolucao = models.TimeField()
+    
+    class Meta:
+        db_table = "atividades"

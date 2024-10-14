@@ -19,3 +19,6 @@ class HistoricoAtividade(models.Model):
         hora_inicial_dt = datetime.combine(self.data, self.hora_inicial)
         hora_final_dt = datetime.combine(self.data, self.hora_final)
         return hora_final_dt - hora_inicial_dt
+    
+    class Meta:
+        db_table ="historico_atividade"

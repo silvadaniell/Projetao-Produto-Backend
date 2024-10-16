@@ -1,10 +1,8 @@
 from django.db import models
-from atividades.models import Atividade 
+
 class Historia(models.Model):
-    # qtd_atividades = models.IntegerField()
+    qtd_atividades = models.IntegerField()
     
-    conteudo_atividade = models.TextField()
-    id_atividade = models.ManyToManyField(Atividade, related_name="historias")
-    
+    # definir os videos e a disposicao das atividades
     class Meta:
         db_table ="historias"
